@@ -1,0 +1,80 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.container {
+    
+    margin-top: 3rem;
+}
+
+.card {
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fffbea;
+}
+
+.text-center img {
+    width: 200px; /* Smaller width */
+    height: auto;
+    border-radius: 0px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.form {
+    text-align: center;
+}
+
+.custom-file-upload {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #DAA520;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.custom-file-upload:hover {
+    background-color: #b38f1f;
+}
+
+#fileInput {
+    display: none;
+}
+
+.save-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background-color: #218838;
+}
+
+.bg-secondary {
+    background-color: #8B4513;
+    padding: 1px 4px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.buttons button {
+    border: 1px solid #DAA520;
+    color: #DAA520;
+    background-color: transparent;
+}
+
+.buttons button:hover {
+    color: #fff;
+    background-color: #DAA520;
+}
+
+.material-icons {
+    vertical-align: bottom;
+}

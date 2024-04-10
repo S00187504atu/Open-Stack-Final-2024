@@ -1,0 +1,64 @@
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2 class="h2">Add Books </h2>
+    </div>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" type="text" formControlName="name" required>
+
+        <div *ngIf="bookForm.get('name').invalid && (bookForm.get('name').dirty || bookForm.get('name').touched)"
+          class="txt-error">
+          Book Name is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Price</label>
+        <input class="form-control" type="number" formControlName="price" required>
+        <div *ngIf="bookForm.get('price').invalid && (bookForm.get('price').dirty || bookForm.get('price').touched)"
+          class="txt-error">
+          Price is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Author</label>
+        <input class="form-control" type="text" formControlName="author" required>
+
+        <div *ngIf="bookForm.get('author').invalid && (bookForm.get('author').dirty || bookForm.get('author').touched)"
+          class="txt-error">
+          Book author is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Genre</label>
+        <input class="form-control" type="text" formControlName="genre" required>
+
+        <div *ngIf="bookForm.get('genre').invalid && (bookForm.get('genre').dirty || bookForm.get('genre').touched)"
+          class="txt-error">
+          Book genre is required.
+        </div>
+      </div>
+      
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control" id="sku" autocomplete="off" formControlName="description"
+          placeholder="Description" rows="3" required></textarea>
+
+
+        <div
+          *ngIf="bookForm.get('description').invalid && (bookForm.get('description').dirty || bookForm.get('description').touched)"
+          class="txt-error">
+          Description is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <button [disabled]="!bookForm.valid" class="btn mt-4 btn-primary btn-block" type="submit">{{isEdit ? "Edit Book"
+          : "Add Book"}}</button>
+      </div>
+    </form>
+  </div>
+</div>

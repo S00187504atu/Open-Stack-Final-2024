@@ -1,0 +1,9 @@
+<h2>user logged in succesfully</h2>
+<p>dashboard works!</p>
+<ng-container *ngIf="userProfile">
+    <div>Welcome, {{ userProfile.name }}</div>
+   
+    <app-user-card [userProfile]="userProfile"></app-user-card>
+  </ng-container>
+
+<button id="signout-button" (click)="handleSignOut()">Sign Out</button>

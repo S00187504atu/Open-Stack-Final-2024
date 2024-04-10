@@ -1,0 +1,71 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.h2 {
+  color: #5D3A00;
+  font-size: 2rem;
+}
+
+.border-bottom {
+  border-bottom: 2px solid #8B4513 !important;
+}
+
+.table {
+  color: #5D3A00;
+  border-collapse: collapse;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #8B4513 !important;
+}
+
+.table thead th {
+  background-color: #fdf6e3;
+  color: #5D3A00;
+}
+
+.table tbody td {
+  background-color: #fffbea;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #DAA520;
+  border-color: #DAA520;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #b38f1f;
+  border-color: #b38f1f;
+}
+
+.btn-danger {
+  background-color: #bd0061;
+  border-color: #bd0061;
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+  background-color: #9b0050;
+  border-color: #9b0050;
+}
+
+.material-icons.md-36 {
+  font-size: 24px;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}

@@ -1,0 +1,64 @@
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm" class="form-signin login-form">
+        <h3 class="txt-color-mg">Sign Up</h3>
+
+        <label for="firstName" class="sr-only">Name:</label>
+        <input type="text" formControlName="name" id="firstName" class="form-control" required>
+        <div *ngIf="signUpForm.get('name').invalid && (signUpForm.get('name').dirty || signUpForm.get('name').touched)"
+            class="txt-error">
+            Name is required.
+        </div>
+        <label for="inputEmail" class="sr-only">Email:</label>
+        <input type="email" id="inputEmail" formControlName="email" class="form-control" required>
+        <div
+            *ngIf="signUpForm.get('email').invalid && (signUpForm.get('email').dirty || signUpForm.get('email').touched)">
+            <div *ngIf="signUpForm.get('email').errors?.['required']" class="txt-error">
+                Email is required.
+            </div>
+            <div *ngIf="signUpForm.get('email').errors?.['email']" class="txt-error">
+                Email must be a valid email address.
+            </div>
+        </div>
+
+        <label for="inputPassword" class="sr-only">Password:</label>
+        <input type="password" id="inputPassword" formControlName="password" class="form-control" minlength="8"
+            required>
+        <div
+            *ngIf="signUpForm.get('password').invalid && (signUpForm.get('password').dirty || signUpForm.get('password').touched)">
+            <div *ngIf="signUpForm.get('password').errors?.['required']" class="txt-error">
+                Password is required.
+            </div>
+
+            <div *ngIf="signUpForm.get('password').errors?.['minlength']" class="txt-error">
+                Password must be at least 8 characters long.
+            </div>
+
+        </div>
+
+        <label for="passwordConfirm" class="sr-only">Confirm Password:</label>
+        <input type="password" formControlName="passwordConfirm" id="passwordConfirm" class="form-control" minlength="8"
+            required>
+        <div
+            *ngIf="signUpForm.get('passwordConfirm').invalid && (signUpForm.get('passwordConfirm').dirty || signUpForm.get('passwordConfirm').touched)">
+            <div *ngIf="signUpForm.get('passwordConfirm').errors?.['required']" class="txt-error">
+                Confirm password is required.
+            </div>
+        </div>
+
+        <div *ngIf="signUpForm?.errors?.['passwordMismatch']" class="txt-error">
+            Passwords do not match.
+        </div>
+
+
+        <div *ngIf="errorMessage" class="txt-error">
+            Account already exist.
+        </div>
+        <div class="row">
+            <div class="col-8 mt-2 anchor" (click)="openLoginPage()">Already User?</div>
+            <div class="col-4">
+                <!-- [disabled]="!signUpForm.valid" -->
+                <button class="btn btn-lg btn-primary btn-block mt-2 right-corner" type="submit">Sign Up</button>
+            </div>
+        </div>
+    </form>
+</div>

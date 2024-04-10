@@ -1,0 +1,30 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.btn-primary {
+  background-color: #DAA520 !important;
+  border-color: #DAA520 !important;
+  align-items: flex-end !important;
+}
+
+.btn-primary:hover {
+  background-color: #b38f1f !important;
+  border-color: #b38f1f !important;
+  align-items: flex-end !important;
+}
+
+.anchor {
+  color: #5D3A00 !important;
+}
+
+.anchor:hover {
+  text-decoration: underline !important;
+  cursor: grab !important;
+}
+
+.txt-color-mg {
+  color: #5D3A00 !important;
+}
+
+.txt-error {
+  color: #DAA520 !important;
+}

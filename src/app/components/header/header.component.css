@@ -1,0 +1,50 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.navbar-light.bg-info {
+  background-color: #fdf6e3 !important;
+  color: #008000 !important; /* Changed to green */
+}
+
+.navbar-brand {
+  color: #008000 !important; /* Changed to green */
+  font-weight: bold !important;
+  font-size: 1.5rem !important;
+}
+
+.navbar-nav .nav-link {
+  color: #008000 !important; /* Changed to green */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fdf6e3 !important;
+  background-color: #DAA520 !important;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold !important;
+  color: #DAA520 !important;
+  background-color: #fffbea !important;
+}
+
+.material-icons {
+  color: #008000 !important; /* Changed to green */
+  vertical-align: middle !important;
+}
+
+.material-icons.md-36 { font-size: 36px !important; }
+
+.fa-american-sign-language-interpreting {
+  color: #008000 !important; /* Changed to green */
+  font-size: 2rem !important;
+}
+
+.left-side-navbar, .right-side-navbar {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
+}
